@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>flask website</title>
+		<style>
+			body{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>NAMES<h1>
+			<ul>
+				{% for name in names %}
+					<li>{{ name }}</li>
+				{% endfor %}
+
+			</ul>
+				<p>linking other page using the url</p>
+				<a href="{{ url_for('link') }}">see more...</a>
+				<!-- link whatever the url is for index function -->
+	</body>
+</html>
