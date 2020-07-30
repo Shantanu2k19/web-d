@@ -59,3 +59,18 @@ route 3: view list of flights
 
 route 4: view passengers on certain flight
           (FLIGHT.html) list flight detail, all passengers travelling
+
+
+
+6. SQL_PYTHON : python equivalent codes and application of sql 
+      airline2- all the template code are same
+           the application.py file and models.py files are changed, python equivalent of sql code from airline1 is used
+
+      create_table: make class(template) for tables(flight,passengers), 
+          then create table, 
+          insert data from csv file, 
+          manipulate and prints it in list.py(also include python equivalent code for sql)
+
+      classes.py is an exapmle  for classes in python, 
+      currency.py is exapmle for api, requests and status_code
+      json.py is python file to print json data from api link of a website using python
