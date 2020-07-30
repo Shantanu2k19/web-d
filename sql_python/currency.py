@@ -1,5 +1,5 @@
 import requests
-#topics covered : requests,api
+#topics covered : requests,api (application programming interface)
 #taking json value from website api.fixer.ip(used to get currency exchenge rates)
 
 def main():
