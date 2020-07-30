@@ -26,7 +26,7 @@ class flight:
 	def delay(self, amount):
 		self.duration += amount
 
-		#keep track of passengers
+		#keep track of passengers 
 		self.passengers = []
 
 	def add_passenger(self, p):
