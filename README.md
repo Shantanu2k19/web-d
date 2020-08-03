@@ -76,5 +76,15 @@ route 4: view passengers on certain flight
       json.py is python file to print json data from api link of a website using python
 
 
-7. JAVASCRIPT : 1) hello.html :querySelector: searchinf for certain tag to update, a counter to increment value and alert at multiples of 10, alerts for different actions, 
-
+7. JAVASCRIPT : 
+      1) hello.html :querySelector: searchinf for certain tag to update, a counter to increment value and alert at multiples of 10, alerts for different actions.
+      2) counter (contains counter.html calling counterjava.js) : examle to show calling of js file from html
+      3) formAlert.html :takes name of user, alerts with hello {name}
+      4) interval.html :update counter on screen after every 1000ms, exaple to use time in website
+      5) tasks.html :make unordered list of task, does not allow user to make empty task, use of addEventListener
+      6) button_color.html :change the color of text on screen based on selected button or drop down list, arrow notation function also shown.
+      7) storage.html :example to use local STORAGE, updates counter and stores value even after reload
+      8) ajax: Asynchronous JavaScript and XML 
+             currency : uses api link to take currency from user, and give exchange rate 
+             vote0 : shows the voted option on all screens of website(broadcasting), hands on backend python, js and html based flask application 
+             vote1 : shows the total number of votes for the options, updates synchronously for all the users   
