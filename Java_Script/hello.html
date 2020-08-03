@@ -1,0 +1,52 @@
+<!DCOTYPE html>
+<html>
+	<head>
+		<script>
+			function hello(gg){
+			alert(gg);
+		    }
+
+		    function selector(){
+		    	document.querySelector('h1').innerHTML='Goodbye!';
+		    }
+		    /*document: webdocument 
+			queryselector: search element in page
+				search h1 elements
+			innerHTML property of html element h1: content between <h1> tags 
+				only the first occurence of h1 and not all
+			now the <h1> data can be replaced with goodbye   */
+
+		    let counter=0;
+		    function count(){
+		    	counter++;
+		    	document.querySelector('#counter').innerHTML=counter;
+		    	//counter : item with id as counter
+
+		    	if(counter%10 === 0){
+		    		alert(`counter is at ${counter}!`);
+		    	}
+				//to change the values in alert dynamically
+				//using back ticks`` and $ sign for the variable
+		    }
+		</script>
+	
+		<title>basic javascript</title>
+	</head>
+	<body>
+		<h1>Welcome!</h1>
+
+		<button onclick="selector()">  click to say goodbye  </button>
+		<br><br>
+
+		<button onmouseover="hello('moving on button creates alert')">  mouse over this button</button>
+		<br><br> 
+
+		<button onkeydown="hello('when selected, if a key is pressed, alert generated')">  select this and press key  </button>
+		<br><br>
+
+		<h2 id="counter">0</h2>
+		<button onclick="count()">  click to increment!  </button>
+		<br><br>
+
+	</body>
+</html>
