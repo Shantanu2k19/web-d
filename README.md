@@ -74,3 +74,7 @@ route 4: view passengers on certain flight
       classes.py is an exapmle  for classes in python, 
       currency.py is exapmle for api, requests and status_code
       json.py is python file to print json data from api link of a website using python
+
+
+7. JAVASCRIPT : 1) hello.html :querySelector: searchinf for certain tag to update, a counter to increment value and alert at multiples of 10, alerts for different actions, 
+
