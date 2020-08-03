@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => 
+            {
+
+            	// By default, submit button is disabled
+                document.querySelector('#submit').disabled = true;
+
+                // Enable button only when key-up, text is entered
+                //also check if the length of entered string is 0, bcs erasing the text will enable submit button
+                document.querySelector('#task').onkeyup = () => {
+                	if(document.querySelector('#task').value.length > 0)
+                    	document.querySelector('#submit').disabled = false;
+                	else
+                    	document.querySelector('#submit').disabled = true;
+                };
+
+                document.querySelector('#new-task').onsubmit = () => 
+                {
+
+                    // Create new item for list, take value from #task
+                    const li = document.createElement('li');
+                    li.innerHTML = document.querySelector('#task').value;
+
+                    // Add new item to task list
+                    document.querySelector('#tasks').append(li);
+
+                    // Clear input field
+                    document.querySelector('#task').value = '';
+
+                    //after clearing, disable the button again
+                    document.querySelector('#submit').disabled = true;
+
+                    // Stop form from submitting(reloading the page), hence the task will not get erased
+                    return false;
+                };
+
+            });
+        </script>
+        <title>Tasks</title>
+    </head>
+
+
+    <body>
+        <h1>Tasks</h1>
+        <ul id="tasks">    </ul>  <!-- empty list-->
+
+        <form id="new-task">
+            <input id="task" autocomplete="off" autofocus placeholder="Add New Task" type="text">
+            <input id="submit" type="submit">  <!-- button replacement -->
+        </form>
+    </body>
+
+</html>

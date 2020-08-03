@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			document.addEventListener('DOMContentLoaded', function()
+            			{document.querySelector('#form').onsubmit = function(){
+            					const name=document.querySelector('#name').value;
+            					alert(`hello ${name}`);
+            				};
+            			});
+			/*
+			whenever event is detected, run function(),
+			inside function(), search form, run function() when form is submitted, 
+					name=name from form
+					generate alert
+			*/
+		</script>		
+		<title>forms</title>
+
+	</head>
+	<body>
+
+		<form id="form">  
+			<input id="name" autocomplete="off" autofocus placeholder="Type Name" type ="text">
+			<input type="submit">
+		</form>
+		
+	</body>
+</html>
