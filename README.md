@@ -88,3 +88,23 @@ route 4: view passengers on certain flight
              currency : uses api link to take currency from user, and give exchange rate 
              vote0 : shows the voted option on all screens of website(broadcasting), hands on backend python, js and html based flask application 
              vote1 : shows the total number of votes for the options, updates synchronously for all the users   
+
+
+
+DJANGO : LECTURE & 
+django-admin startproject mysite
+creates mysite name project with files : 
+manage.py  : python script to perform operations on website
+mysite folder : 
+asgi.py
+  __init__.py : tells mysite directory is a python package
+  settings.py : setting for web app, time zone, database etc.
+  urls.py : file to take care of url and routes user of website can go to 
+  wsgi.py : way to host website, kinda
+
+
+to create an app : python manage.py startapp name
+do some shit
+running webapp : 
+directory : mysite
+command : python manage.py runserver
