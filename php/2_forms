@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <!-- FORM  -->
+        <form action="site.php" method="get">    <!-- site.php is name of this file(2_forms) -->
+            Name: <input type="text" name="username">
+            <br><br>
+            Age: <input type="number" name="age">
+            <br><br>
+            Pet: <input type="text" name="pet">
+            <br><br>
+            <input type="submit">
+        </form>
+
+
+        <!-- PHP  -->
+        <br>
+        entered name : <?php
+        echo $_GET["username"]." <br>and age : ".$_GET["age"];
+
+        $fav_pet = $_GET["pet"];
+        echo "<br>your favourite pet is $fav_pet .";
+        ?>
+
+    </body>
+</html>
