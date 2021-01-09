@@ -20,6 +20,10 @@
          echo "<hr>";
          echo str_replace("Singh","Dhiman",$name)."<br>";
          echo substr($name,0,3); //substring from index 0, 3 elements
+         echo "<br>";
+         echo round(abs(-40+10.5)); 
+         //gives answer, sqrt(), pow(a,b), max(a,b), 
+         //ceil(3.3) gives 4, floor(3.9) gives 3
         ?>
 
     </body>
