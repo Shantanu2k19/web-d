@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+        <?php
+         $name = "Shan Singh"; 
+         $age = 20;  //whole number
+         $gpa = 9.23; //float 
+         $ismale = true; //bool
+         echo "<h3> $name is $age years old ";
+         echo("<h1> Hello <br> world </h1>");
+         echo "<hr>";
+         echo "<p> my php site</p>";
+         echo "in lower: ".strtolower($name).", in upper: ".strtoupper($name).", with length: ".strlen($name)."<br>";
+         echo "first char : ".$name[0];
+         echo "<hr>";
+         echo str_replace("Singh","Dhiman",$name)."<br>";
+         echo substr($name,0,3); //substring from index 0, 3 elements
+        ?>
+
+    </body>
+</html>
