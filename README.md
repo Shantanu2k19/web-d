@@ -108,3 +108,14 @@ do some shit
 running webapp : 
 directory : mysite
 command : python manage.py runserver
+
+
+
+php : installed in wndows: 1. extracted the file in C\:Users\shant\php
+- added route to php from start-environment-environment variables-paths-edit path- added path to php
+    : created a folder www at Users\shant\www
+    and created a file site.php in it
+    : for starting server, in cmd: php -S localhost:4000
+    : go to url http://localhost:4000/www/site.php for website 
+1. added string basics and basic php file
+2. 
