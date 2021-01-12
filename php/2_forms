@@ -6,7 +6,7 @@
     </head>
     <body>
         <!-- FORM  -->
-        <form action="site.php" method="get">    <!-- site.php is name of this file(2_forms) -->
+        <form action="site.php" method="get">  <!-- use POST here for post method -->
             Name: <input type="text" name="username">
             <br><br>
             Age: <input type="number" name="age">
@@ -22,8 +22,13 @@
         entered name : <?php
         echo $_GET["username"]." <br>and age : ".$_GET["age"];
 
-        $fav_pet = $_GET["pet"];
-        echo "<br>your favourite pet is $fav_pet .";
+        $fav_pet = $_GET["pet"];  //use $_POST[] to have post as method 
+        echo "<br>your favourite pet is $fav_pet . <br>";
+    
+        //here food is not defined will give warning on page
+        //but in link we can add &food=banana to echo value banana on page
+        //hence url cna be used to modify and store, all beacuse of get method used here 
+        echo $_GET["food"];
         ?>
 
     </body>
