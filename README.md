@@ -118,4 +118,8 @@ php : installed in wndows: 1. extracted the file in C\:Users\shant\php
     : for starting server, in cmd: php -S localhost:4000
     : go to url http://localhost:4000/www/site.php for website 
 1. added string basics and basic php file
-2. 
+
+site 2: checkboxes , arrays 
+site 3:  functions, associated arrays(pairs)
+site 4: if, switch, while, for loop
+site 5: to add html and other php files to website using "include", footer.html and header.php used in this file
