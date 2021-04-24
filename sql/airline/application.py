@@ -6,7 +6,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 
 app = Flask(__name__)
  
-engine = create_engine("postgres://zodiac:elonmusk@localhost/postgres")
+engine = create_engine("postgresql://zodiac_sql:shan@localhost/postgres")
 db = scoped_session(sessionmaker(bind=engine))
 
 @app.route("/")
@@ -34,6 +34,7 @@ def book():
         return render_template("error.html", message="No such flight with that id.")
     db.execute("INSERT INTO passengers (name, flight_id) VALUES (:name, :flight_id)",
             {"name": name, "flight_id": flight_id})
+            #placeholder syntax here, sequalchemy will handle rece condition and escaping dangerous character 
     db.commit()
     return render_template("success.html")
 

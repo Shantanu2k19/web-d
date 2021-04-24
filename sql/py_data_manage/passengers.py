@@ -1,23 +1,14 @@
 """
 data stored in sqlalchemy database
 name of db  = postgres
-user : zodiac
-password : elonmusk
+user : zodiac_sql
+password : shan
 
 flights table stored
 
 this file:
 -to view all the flights, source destination and duration
 -takes input, flight id and views passengers in it
-
-output: 
-      Flight 3: goa to assam, 530 minutes
-
-      Flight ID: 3
-
-      Passengers:
-      mandy
-      lol
 
 """
 
@@ -29,7 +20,7 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-engine = create_engine("postgres://zodiac:elonmusk@localhost/postgres")
+engine = create_engine("postgresql://zodiac_sql:shan@localhost/postgres")
 db = scoped_session(sessionmaker(bind=engine))
 
 def main():
@@ -41,8 +32,7 @@ def main():
 
     # Prompt user to choose a flight.
     flight_id = int(input("\nFlight ID: "))
-    flight = db.execute("SELECT origin, destination, duration FROM flights WHERE id = :id",
-                        {"id": flight_id}).fetchone()
+    flight = db.execute("SELECT origin, destination, duration FROM flights WHERE id = :id", {"id": flight_id}).fetchone()
 
     # Make sure flight is valid.
     if flight is None:
@@ -50,8 +40,7 @@ def main():
         return
 
     # List passengers.
-    passengers = db.execute("SELECT name FROM passengers WHERE flight_id = :flight_id",
-                            {"flight_id": flight_id}).fetchall()
+    passengers = db.execute("SELECT name FROM passengers WHERE flight_id = :flight_id", {"flight_id": flight_id}).fetchall()
     print("\nPassengers:")
     for passenger in passengers:
         print(passenger.name)

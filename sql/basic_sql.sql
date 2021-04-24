@@ -42,7 +42,8 @@ select * from flights where origin in ('delhi','lol');
 select * from flights where destination like '%o%';
 
 --\d : show relations\variables
-
+--\dt to list all the tables
+--\dt+ for more details
 
 UPDATE flights
 set duration=430 where origin ='delhi' and destination='mysore';

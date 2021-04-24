@@ -7,7 +7,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
 #                                 (username)(pass)  (host)  |(name of database where data is stored)
-engine = create_engine("postgres://zodiac:elonmusk@localhost/postgres") #os.getenv("DATABASE_URL"))
+engine = create_engine("postgresql://zodiac_sql:shan@localhost/postgres") #os.getenv("DATABASE_URL"))
 #engine is managing the connection with database, created using lib sqlalchemy
 #database_url is the environment variable, url of database, in this case of local host
 
