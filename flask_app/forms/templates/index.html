@@ -1,15 +1,15 @@
-from flask import Flask, render_template, request
+{% extends "layout.html" %}
 
-app = Flask(__name__)
+{% block heading %}
+	Page number one
+{% endblock %}
 
-@app.route("/")
-def index():
-    return render_template("index.html")
+{% block body %}
+	<p>body of the pagee</p>
+	<form action="{{ url_for('hello') }}" method = "post">
+		<input type="text" name="name" placeholder="Enter yu name">
+		<button>Submit</button>
+	</form>
+{% endblock %}
 
-@app.route("/hello", methods=["GET","POST"]) #submitting data via post method
-def hello():
-	if request.method == "GET":
-		return "please submit the form"
-	else:
-	    name = request.form.get("name") #access form and get name
-	    return render_template("hello.html", name=name)
+	<!--<a href="{{ url_for('more') }}">See more...</a>-->
