@@ -7,6 +7,7 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
+#shantanu singh
 #notes global variable,hence common to all the users on server
 #notes = []
 #should be avoided, hence concept of sessions
