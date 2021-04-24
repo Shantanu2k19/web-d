@@ -1,0 +1,18 @@
+
+body {
+    height: 270vh;
+    width: 95vw;
+    font-family:  monospace,'Courier New', Courier;
+    background-color: white; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, white, gray); 
+    color: darkblue;
+}
+
+.lol{
+    width: 95vw;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: crimson;
+    line-height: 31px;
+}
