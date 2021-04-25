@@ -17,10 +17,14 @@ class Flight(db.Model):
     passengers = db.relationship("Passenger", backref="flight", lazy=True)
     #relating both tables, flight is the keyword to access the passenger details
     #lazy evaluate tells database to not fetch the passengers info unless called(effeciency bonus)
-
+    """ using this
+    select * from flights join passengers on flight.id = passengers.flight_id where passenegrs.name = 'shan';
+    can be converted to 
+    passengers.query.filter_by(name='shan')\.first().flight()
+    """
 
     def add_passenger(self, name):
-        p = Passenger(name=name, flight_id=self.id)
+        p = Passenger(name=name, flight_id=self.id)  #self is individual flight here
         db.session.add(p)
         db.session.commit()
 

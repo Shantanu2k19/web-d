@@ -4,8 +4,11 @@
 #this code prints the json data from a website using python
 
 import requests
+#request library allows us for http requests like get, post, delete
 
 res = requests.get("http://127.0.0.1:5000/api/flights/16")
-data = res.json()
+data = res.json()  #will get error here if any exist
 print(data["passengers"])
 print(res.status_code)
+
+#res.status_code

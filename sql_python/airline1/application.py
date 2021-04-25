@@ -3,7 +3,7 @@ from models import *
 
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = ("postgres://zodiac:elonmusk@localhost/postgres")
+app.config["SQLALCHEMY_DATABASE_URI"] = ("postgresql://zodiac_sql:shan@localhost/postgres")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)
 

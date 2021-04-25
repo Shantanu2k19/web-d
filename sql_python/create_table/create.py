@@ -10,7 +10,7 @@ from models import *
 
 #here we locating the database
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = ("postgres://zodiac:elonmusk@localhost/postgres")
+app.config["SQLALCHEMY_DATABASE_URI"] = ("postgresql://zodiac_sql:shan@localhost/postgres")
 #app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL") #original code, above is changed one
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False

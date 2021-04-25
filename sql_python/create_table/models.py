@@ -18,5 +18,5 @@ class passengers(db.Model):
 	__tablename__ = "passengers"
 	id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.String, nullable=False)
-	#foreign key, flight_key is gonna reference id column from flight table
+	#foreign key, flight key is gonna reference id column from flight table
 	flight_id = db.Column(db.Integer, db.ForeignKey("flights.id"), nullable=False)
